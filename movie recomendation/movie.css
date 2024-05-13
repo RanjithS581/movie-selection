@@ -1,0 +1,32 @@
+.p1{
+    text-align: center;
+}
+.p2{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.p2 select{
+    width: 80px;
+    height: 20px;
+
+}
+body{
+    background-color: rgb(235, 231, 231);
+}
+
+.movie{
+    width: 95vh;
+    height: 90px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px grey;
+    border-radius: 10px;
+}
+.movie div{
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+.movie h2{
+    margin-bottom: 0px;
+}

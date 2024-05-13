@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./movie.css">
+</head>
+<body>
+
+    <div class="p1">
+    <h1> Movie Recommendation System </h1>
+    </div>
+
+    <div class="p2">
+       <p> Select Genre :</p>
+
+       <select name="genre" id="genre-select">
+            <option value="all"> all </option>
+            <option value="drama"> drama </option>
+            <option value="comedy"> comedy</option>
+            <option value="action"> action </option>
+       </select>
+
+    </div>
+
+    <div class="movie">
+        <h2> The Dark Knight </h2>
+        <div>
+            <h5> Genre: </h5>
+            <p id="genre" class="genre"> action </p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <h2> Inception </h2>
+        <div>
+            <h5> Genre: </h5>
+            <p id="genre" class="genre"> action </p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <h2> The Hangover </h2>
+        <div>
+            <h5> Genre: </h5>
+            <p id="genre" class="genre"> comedy </p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <h2> Superbad </h2>
+        <div>
+            <h5> Genre: </h5>
+            <p id="genre" class="genre"> comedy </p>
+        </div>
+    </div>
+
+    <div class="movie">
+        <h2> The Shawshank Redemption </h2>
+        <div>
+            <h5> Genre: </h5>
+            <p id="genre" class="genre"> drama </p>
+        </div>
+    </div>
+
+    <script>
+                document.getElementById('genre-select').addEventListener('change', function() {
+            var selectedGenre = this.value;
+            var movies = document.querySelectorAll('.movie');
+            
+            movies.forEach(function(movie) {
+                var movieGenre = movie.querySelector('.genre').textContent.trim();
+                if (selectedGenre === 'all' || movieGenre === selectedGenre) {
+                    movie.style.display = '';
+                } else {
+                    movie.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
